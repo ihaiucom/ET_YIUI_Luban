@@ -55,10 +55,26 @@ MonoBehaviour:
       AssetTags: 
       ActiveRuleName: EnableGroup
       Collectors:
-      - CollectPath: Packages/cn.etetet.excel/Config/Bytes/c
-        CollectorGUID: 1f8da9b8d3bb3ca469a7f4c383b6a731
+      - CollectPath: Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client
+        CollectorGUID: e99aadedc8795244899750836fe4d132
         CollectorType: 0
         AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+      - CollectPath: Packages/cn.etetet.yiuilubangen/Assets/LubanGen/StartConfig/Localhost/Binary/ClientServer
+        CollectorGUID: 498e0f5d4ab09a844b758d27ad93fc8c
+        CollectorType: 0
+        AddressRuleName: AddressDisable
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+      - CollectPath: Packages/cn.etetet.yiuilubangen/Assets/LubanGen/StartConfig/Release/Binary/ClientServer
+        CollectorGUID: 49082d1fc9f9c2e40936e45767b556fe
+        CollectorType: 0
+        AddressRuleName: AddressDisable
         PackRuleName: PackDirectory
         FilterRuleName: CollectAll
         AssetTags: 
