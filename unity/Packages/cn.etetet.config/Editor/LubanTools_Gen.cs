@@ -26,8 +26,89 @@ namespace YIUI.Luban.Editor
         {
             ClearAll();
 
+            return RunGen();
+        }
+        public static bool LubanGen2()
+        {
+            ClearAll();
+
             return CreateLubanConf();
         }
+
+
+        private static bool RunGen()
+        {
+            
+            var succeed = false;
+
+            try
+            {
+                CreateLubanBefore();
+
+                EditorUtility.DisplayProgressBar("Luban", "导出Luban配置中...", 0);
+
+                var tasks = new List<Task<bool>>();
+
+                    tasks.Add(Task.Run(() =>
+                    {
+                        try
+                        {
+                            string cmdPath = "../config/gen.ps1";
+                            string workingDirectory = "../config";
+                            var result = ExecuteSingleScript(cmdPath, true, workingDirectory);
+                            if (!result)
+                            {
+                                return false;
+                            }
+                            else
+                            {
+                                //Debug.Log($"Luban导出完成,{lubanConfigPath}");
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            Debug.LogError($"创建 LubanConf失败 {e.Message}");
+                            return false;
+                        }
+
+                        return true;
+                    }));
+
+                Task.WaitAll(tasks.ToArray());
+
+                succeed = tasks.All(t => t.Result);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+            finally
+            {
+                EditorUtility.ClearProgressBar();
+
+                if (succeed)
+                {
+                    CreateLubanAfterSucceed();
+                    AssetDatabase.SaveAssets();
+                    EditorApplication.ExecuteMenuItem("Assets/Refresh");
+                    // CloseWindowRefresh?.Invoke();
+                    Debug.Log($"Luban 导出成功");
+                }
+                else
+                {
+                    CreateLubanAfterFailed();
+                    // CloseWindow?.Invoke();
+                    Debug.LogError($"Luban 导出失败");
+                }
+            }
+
+            return true;
+        }
+        
+        
+        
+
 
         private class SchemaFile
         {
@@ -251,30 +332,30 @@ namespace YIUI.Luban.Editor
             return ExecuteSingleScript(foundScripts[0], tips);
         }
 
-        private static bool ExecuteSingleScript(string scriptPath, bool tips)
+        private static bool ExecuteSingleScript(string scriptPath, bool tips, string workingDirectory = ".")
         {
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
                 if (m_UsePs)
                 {
-                    return RunProcess("powershell.exe", $"-ExecutionPolicy Bypass -File \"{scriptPath}\"", tips);
+                    return RunProcess("powershell.exe", $"-ExecutionPolicy Bypass -File \"{scriptPath}\"", tips, workingDirectory);
                 }
                 else
                 {
                     ConvertLineEndings(scriptPath, "\r\n");
-                    return RunProcess(scriptPath, "", tips);
+                    return RunProcess(scriptPath, "", tips, workingDirectory);
                 }
             }
             else
             {
                 if (m_UsePs)
                 {
-                    return RunProcess("/usr/local/bin/pwsh", $"-ExecutionPolicy Bypass -File \"{scriptPath}\"", tips);
+                    return RunProcess("/usr/local/bin/pwsh", $"-ExecutionPolicy Bypass -File \"{scriptPath}\"", tips, workingDirectory);
                 }
                 else
                 {
                     ChangePermissions(scriptPath, "755");
-                    return RunProcess("/bin/bash", $"-c \"{scriptPath}\"", tips);
+                    return RunProcess("/bin/bash", $"-c \"{scriptPath}\"", tips, workingDirectory);
                 }
             }
         }
@@ -308,7 +389,7 @@ namespace YIUI.Luban.Editor
 
         private static bool RunProcess(string exe, string arguments, bool tips = false, string workingDirectory = ".", bool waitExit = true)
         {
-            Debug.Log($"执行命令: {exe} {arguments}");
+            Debug.Log($"执行命令: {exe} {arguments}, 在目录 {workingDirectory} 中");
             
             var redirectStandardOutput = false;
             var redirectStandardError  = false;

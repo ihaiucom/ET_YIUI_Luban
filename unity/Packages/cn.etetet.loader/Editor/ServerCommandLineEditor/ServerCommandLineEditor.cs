@@ -28,7 +28,7 @@ namespace ET
         public void OnEnable()
         {
             // DirectoryInfo directoryInfo = new DirectoryInfo("Packages/cn.etetet.excel/Config/Bytes/cs/StartConfig");
-            DirectoryInfo directoryInfo = new DirectoryInfo("Packages/cn.etetet.config/Assets/Config/Binary/Server/StartConfig");
+            DirectoryInfo directoryInfo = new DirectoryInfo("Packages/cn.etetet.config/Assets/LubanGen/StartConfig");
             this.startConfigs = directoryInfo.GetDirectories().Select(x => x.Name).ToArray();
         }
 
