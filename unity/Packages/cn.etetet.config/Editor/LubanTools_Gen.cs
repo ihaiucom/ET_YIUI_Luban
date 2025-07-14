@@ -28,7 +28,7 @@ namespace YIUI.Luban.Editor
 
             return RunGen();
         }
-        public static bool LubanGen2()
+        private static bool LubanGen2()
         {
             ClearAll();
 
