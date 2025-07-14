@@ -58,7 +58,15 @@ MonoBehaviour:
       - CollectPath: Packages/cn.etetet.config/Assets/LubanGen/Config/Binary/Client
         CollectorGUID: e99aadedc8795244899750836fe4d132
         CollectorType: 0
-        AddressRuleName: AddressByFileName
+        AddressRuleName: AddressDisable
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+      - CollectPath: Packages/cn.etetet.config/Assets/LubanGen/Config/Binary/ClientServer
+        CollectorGUID: 3cf8e07a5109d6d40b49acfb3e81b176
+        CollectorType: 0
+        AddressRuleName: AddressDisable
         PackRuleName: PackDirectory
         FilterRuleName: CollectAll
         AssetTags: 

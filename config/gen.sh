@@ -15,6 +15,10 @@ dotnet $GEN_CLIENT \
 -d bin \
 -d json \
 --conf $CONFIG_ROOT/luban.conf \
+-x tableImporter.filePattern=(.*) \
+-x tableImporter.tableNamespaceFormat={0} \
+-x tableImporter.tableNameFormat={0}ConfigCategory \
+-x tableImporter.valueTypeNameFormat={0}Config \
 -x outputCodeDir=$WORKSPACEGEN/CodeMode/Model/Client/LubanGen/Config  \
 -x bin.outputDataDir=$WORKSPACEGEN/Assets/LubanGen/Config/Binary/Client \
 -x json.outputDataDir=$WORKSPACEGEN/Assets/LubanGen/Config/Json/Client
@@ -29,6 +33,10 @@ dotnet $GEN_CLIENT \
 -d bin \
 -d json \
 --conf $CONFIG_ROOT/luban.conf \
+-x tableImporter.filePattern=(.*) \
+-x tableImporter.tableNamespaceFormat={0} \
+-x tableImporter.tableNameFormat={0}ConfigCategory \
+-x tableImporter.valueTypeNameFormat={0}Config \
 -x outputCodeDir=$WORKSPACEGEN/CodeMode/Model/Server/LubanGen/Config  \
 -x bin.outputDataDir=$WORKSPACEGEN/Assets/LubanGen/Config/Binary/Server \
 -x json.outputDataDir=$WORKSPACEGEN/Assets/LubanGen/Config/Json/Server
@@ -43,6 +51,10 @@ dotnet $GEN_CLIENT \
 -d bin \
 -d json \
 --conf $CONFIG_ROOT/luban.conf \
+-x tableImporter.filePattern=(.*) \
+-x tableImporter.tableNamespaceFormat={0} \
+-x tableImporter.tableNameFormat={0}ConfigCategory \
+-x tableImporter.valueTypeNameFormat={0}Config \
 -x outputCodeDir=$WORKSPACEGEN/CodeMode/Model/ClientServer/LubanGen/Config  \
 -x bin.outputDataDir=$WORKSPACEGEN/Assets/LubanGen/Config/Binary/ClientServer \
 -x json.outputDataDir=$WORKSPACEGEN/Assets/LubanGen/Config/Json/ClientServer
@@ -60,6 +72,10 @@ dotnet $GEN_CLIENT \
 -d bin \
 -d json \
 --conf $START_CONFIG_ROOT/Localhost/Base/luban.conf \
+-x tableImporter.filePattern=(.*) \
+-x tableImporter.tableNamespaceFormat={0} \
+-x tableImporter.tableNameFormat={0}ConfigCategory \
+-x tableImporter.valueTypeNameFormat={0}Config \
 -x outputCodeDir=$WORKSPACEGEN/CodeMode/Model/Server/LubanGen/StartConfig \
 -x bin.outputDataDir=$WORKSPACEGEN/Assets/LubanGen/StartConfig/Localhost/Binary/Server \
 -x json.outputDataDir=$WORKSPACEGEN/Assets/LubanGen/StartConfig/Localhost/Json/Server
@@ -73,6 +89,10 @@ dotnet $GEN_CLIENT \
 -d bin \
 -d json \
 --conf $START_CONFIG_ROOT/Release/Base/luban.conf \
+-x tableImporter.filePattern=(.*) \
+-x tableImporter.tableNamespaceFormat={0} \
+-x tableImporter.tableNameFormat={0}ConfigCategory \
+-x tableImporter.valueTypeNameFormat={0}Config \
 -x outputCodeDir=$WORKSPACEGEN/CodeMode/Model/Server/LubanGen/StartConfig \
 -x bin.outputDataDir=$WORKSPACEGEN/Assets/LubanGen/StartConfig/Release/Binary/Server \
 -x json.outputDataDir=$WORKSPACEGEN/Assets/LubanGen/StartConfig/Release/Json/Server
@@ -87,5 +107,9 @@ dotnet $GEN_CLIENT \
 -t all \
 -c cs-bin \
 --conf $START_CONFIG_ROOT/Localhost/Base/luban.conf \
+-x tableImporter.filePattern=(.*) \
+-x tableImporter.tableNamespaceFormat={0} \
+-x tableImporter.tableNameFormat={0}ConfigCategory \
+-x tableImporter.valueTypeNameFormat={0}Config \
 -x outputCodeDir=$WORKSPACEGEN/CodeMode/Model/ClientServer/LubanGen/StartConfig 
 echo ==================== Localhost ClientServer 完成 ====================
