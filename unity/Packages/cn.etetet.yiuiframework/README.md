@@ -22,7 +22,7 @@
 | 1201 | [cn.etetet.yiuiloopscrollrectasync](https://github.com/ET-Packages/cn.etetet.yiuiloopscrollrectasync)           | [无限循环列表 (异步)](https://lib9kmxvq7k.feishu.cn/wiki/HPbwwkhsKi9aDik5VEXcqPhDnIh)   |
 | 1202 | [cn.etetet.yiuiloopscrollrectsync](https://github.com/ET-Packages/cn.etetet.yiuiloopscrollrectsync)             | [无限循环列表 (同步)](https://lib9kmxvq7k.feishu.cn/wiki/HPbwwkhsKi9aDik5VEXcqPhDnIh)   |
 | 1203 | [cn.etetet.yiuiyooassets](https://github.com/ET-Packages/cn.etetet.yiuiyooassets)                               | [YooAsset 资源管理](https://lib9kmxvq7k.feishu.cn/wiki/SUpUwiABuip53zkWEdwcITACntc) |
-| 1204 | [cn.etetet.yiuiluban](https://github.com/ET-Packages/cn.etetet.yiuiluban)                                       | [Luban 配置](https://lib9kmxvq7k.feishu.cn/wiki/W1ylwC9xDip1YQk4eijcxgO9nh0)      |
+| 1204 | [cn.etetet.config](https://github.com/ET-Packages/cn.etetet.config)                                       | [Luban 配置](https://lib9kmxvq7k.feishu.cn/wiki/W1ylwC9xDip1YQk4eijcxgO9nh0)      |
 | 1205 | [cn.etetet.yiuiinvoke](https://github.com/ET-Packages/cn.etetet.yiuiinvoke)                                       | [Invoke 文档](https://lib9kmxvq7k.feishu.cn/wiki/TpyYwbWIUizhfKkcubocTZgInse)     |
 | 应用   |
 | 1301 | [cn.etetet.yiuigm](https://github.com/ET-Packages/cn.etetet.yiuigm)                                             | [GM命令](https://lib9kmxvq7k.feishu.cn/wiki/NYADwMydliVmQ7kWXOuc0yxGn7p)          |

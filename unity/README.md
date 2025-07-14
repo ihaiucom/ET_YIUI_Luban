@@ -117,7 +117,7 @@ WOW001-人物进入场景.mp4
 # ET9最新Package，在这里搜索插件[ET Packages](https://github.com/orgs/ET-Packages/packages)，安装请看运行指南 
 1. cn.etetet.mongodb  数据库补丁工具增强db包，用于团队或者线上对数据库数据打补丁，售价100元  
 2. [cn.etetet.yiuinumeric](https://lib9kmxvq7k.feishu.cn/wiki/GHDOwsmy0iQQMok3gU7cgxbpn7x) 增强版数值系统，需要搭配下面的luban插件使用，售价100元
-3. [cn.etetet.yiuiluban](https://lib9kmxvq7k.feishu.cn/wiki/W1ylwC9xDip1YQk4eijcxgO9nh0) 无缝替换cn.etetet.excel成luban配置，售价100元  
+3. [cn.etetet.config](https://lib9kmxvq7k.feishu.cn/wiki/W1ylwC9xDip1YQk4eijcxgO9nh0) 无缝替换cn.etetet.excel成luban配置，售价100元  
    0. 限免 购买luban包即赠送以下所有  
    1. [cn.etetet.yiuicondition](https://lib9kmxvq7k.feishu.cn/wiki/Kc0awA9EXiRJylkreL9cfLJFnsg)  条件系统  
    2. [cn.etetet.yiuigameobjectpool](https://lib9kmxvq7k.feishu.cn/wiki/UyigweBFXipNJnkCIY6coHzFnSc)  游戏对象缓存池  

@@ -55,7 +55,7 @@ MonoBehaviour:
       AssetTags: 
       ActiveRuleName: EnableGroup
       Collectors:
-      - CollectPath: Packages/cn.etetet.yiuilubangen/Assets/LubanGen/Config/Binary/Client
+      - CollectPath: Packages/cn.etetet.config/Assets/LubanGen/Config/Binary/Client
         CollectorGUID: e99aadedc8795244899750836fe4d132
         CollectorType: 0
         AddressRuleName: AddressByFileName
@@ -63,7 +63,7 @@ MonoBehaviour:
         FilterRuleName: CollectAll
         AssetTags: 
         UserData: 
-      - CollectPath: Packages/cn.etetet.yiuilubangen/Assets/LubanGen/StartConfig/Localhost/Binary/ClientServer
+      - CollectPath: Packages/cn.etetet.config/Assets/LubanGen/StartConfig/Localhost/Binary/ClientServer
         CollectorGUID: 498e0f5d4ab09a844b758d27ad93fc8c
         CollectorType: 0
         AddressRuleName: AddressDisable
@@ -71,7 +71,7 @@ MonoBehaviour:
         FilterRuleName: CollectAll
         AssetTags: 
         UserData: 
-      - CollectPath: Packages/cn.etetet.yiuilubangen/Assets/LubanGen/StartConfig/Release/Binary/ClientServer
+      - CollectPath: Packages/cn.etetet.config/Assets/LubanGen/StartConfig/Release/Binary/ClientServer
         CollectorGUID: 49082d1fc9f9c2e40936e45767b556fe
         CollectorType: 0
         AddressRuleName: AddressDisable

@@ -1,0 +1,21 @@
+{
+    "name": "ET.Config.Editor",
+    "rootNamespace": "",
+    "references": [
+        "ET.Core",
+        "ET.Core.Editor",
+        "ET.YIUIFramework",
+        "ET.SourceGeneratorAttribute"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

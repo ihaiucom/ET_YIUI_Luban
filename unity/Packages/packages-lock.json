@@ -18,6 +18,12 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "cn.etetet.config": {
+      "version": "file:cn.etetet.config",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "cn.etetet.console": {
       "version": "file:cn.etetet.console",
       "depth": 0,
@@ -260,18 +266,6 @@
       "dependencies": {
         "cn.etetet.yiuiframework": "2.0.0"
       }
-    },
-    "cn.etetet.yiuiluban": {
-      "version": "file:cn.etetet.yiuiluban",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
-    },
-    "cn.etetet.yiuilubangen": {
-      "version": "file:cn.etetet.yiuilubangen",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
     },
     "cn.etetet.yiuireddot": {
       "version": "file:cn.etetet.yiuireddot",

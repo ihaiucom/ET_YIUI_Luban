@@ -1,0 +1,14 @@
+﻿{
+  "name": "cn.etetet.config",
+  "displayName": "Game.Config",
+  "version": "1.0.0",
+  "unity": "2022.3",
+  "category": "Config/Luban",
+  "description": "Luban 配置工具",
+  "author": {
+    "name": "zengfeng",
+    "url": "ihaiu.com"
+  },
+  "relatedPackages": {},
+  "dependencies": {}
+}
