@@ -64,7 +64,11 @@ public class DefaultSchemaCollector : SchemaCollectorBase
         ITableImporter tableImporter = SchemaManager.Ins.CreateTableImporter(tableImporterName);
         foreach (var table in tableImporter.LoadImportTables())
         {
-            Add(table);
+            if (!HasTable(table.Name))
+            {
+                Add(table);
+            }
+
         }
     }
 }

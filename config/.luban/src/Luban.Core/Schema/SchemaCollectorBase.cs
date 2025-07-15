@@ -1,3 +1,4 @@
+using System.Collections.Concurrent;
 using Luban.RawDefs;
 
 namespace Luban.Schema;
@@ -10,6 +11,7 @@ public abstract class SchemaCollectorBase : ISchemaCollector
     private readonly List<RawBean> _beans = new();
 
     private readonly List<RawTable> _tables = new();
+    private readonly ConcurrentDictionary<string, bool> _tableExistDict = new();
 
     private readonly List<RawRefGroup> _refGroups = new();
 
@@ -32,11 +34,19 @@ public abstract class SchemaCollectorBase : ISchemaCollector
         };
     }
 
+    public bool HasTable(string name)
+    {
+        // Console.WriteLine($"HasTable {name} = { _tableExistDict.ContainsKey(name)}");
+        return _tableExistDict.ContainsKey(name);
+    }
+
     public void Add(RawTable table)
     {
         lock (this)
         {
+            // Console.WriteLine($"Add {table.Name}");
             _tables.Add(table);
+            _tableExistDict.TryAdd(table.Name, true);
         }
     }
 
