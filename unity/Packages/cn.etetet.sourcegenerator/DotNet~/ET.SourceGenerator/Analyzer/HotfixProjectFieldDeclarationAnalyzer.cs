@@ -55,6 +55,17 @@ namespace ET
 
         private void Analyzer(SemanticModelAnalysisContext context, INamedTypeSymbol namedTypeSymbol)
         {
+            
+            INamedTypeSymbol? typeSymbol = namedTypeSymbol;
+            while (typeSymbol != null)
+            {
+                if (typeSymbol.HasAttribute(Definition.DisableAnalyzerAttribute))
+                {
+                    return;
+                }
+                typeSymbol = typeSymbol.BaseType;
+            }
+            
             foreach (ISymbol? memberSymbol in namedTypeSymbol.GetMembers())
             {
                 // 筛选出属性成员

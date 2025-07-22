@@ -103,6 +103,8 @@ namespace ET
         public const string DisableNewAttribute = "ET.DisableNewAttribute";
 
         public const string EnableClassAttribute = "ET.EnableClassAttribute";
+
+        public const string DisableAnalyzerAttribute = "ET.DisableAnalyzerAttribute";
     }
 }
 
