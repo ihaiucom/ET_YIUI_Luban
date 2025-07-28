@@ -1,0 +1,12 @@
+{
+    "Id": 202,
+    "Name": "Game.UI",
+    "ScriptsReferences": {
+        "ModelView": [
+            "zeng.gameframe.ui"
+        ],
+        "HotfixView": [
+            "zeng.gameframe.ui"
+        ]
+    }
+}
