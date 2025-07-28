@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 622723167158483776}
   - component: {fileID: 8443153797286253073}
-  - component: {fileID: 4461286702490237272}
-  - component: {fileID: 3315759643925799560}
+  - component: {fileID: 7770401626069450950}
+  - component: {fileID: 5898289215828210653}
   m_Layer: 5
   m_Name: LobbyPanel
   m_TagString: Untagged
@@ -50,7 +50,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2195227512150136228}
   m_CullTransparentMesh: 1
---- !u!114 &4461286702490237272
+--- !u!114 &7770401626069450950
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,16 +59,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2195227512150136228}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76af6b314c984a70bd77fd9c0d998f89, type: 3}
+  m_Script: {fileID: 11500000, guid: ca57abc2bdf669649b99e8935e209d08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 2195227512150136228}
-    - {fileID: 2354663173531427657}
-    - {fileID: 5062891929891414088}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -76,8 +73,8 @@ MonoBehaviour:
     SerializationNodes:
     - Name: AllChildCdeTable
       Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[YIUIFramework.UIBindCDETable, ET.YIUIFramework]],
-        mscorlib
+      Data: 0|System.Collections.Generic.List`1[[Zeng.GameFrame.UIS.UIBindCDETable,
+        zeng.gameframe.ui]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -87,24 +84,41 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: m_PackagesName
-      Entry: 1
-      Data: yiuistatesync
+    - Name: m_AllChildUIBase
+      Entry: 7
+      Data: 1|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[Zeng.GameFrame.UIS.UIBase,
+        zeng.gameframe.ui]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 2|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: IsSplitData
       Entry: 5
       Data: false
     - Name: PanelSplitData
       Entry: 7
-      Data: 1|YIUIFramework.UIPanelSplitData, ET.YIUIFramework
+      Data: 3|Zeng.GameFrame.UIS.UIPanelSplitData, zeng.gameframe.ui
     - Name: Panel
-      Entry: 10
-      Data: 0
+      Entry: 6
+      Data: 
     - Name: AllViewParent
-      Entry: 10
-      Data: 1
+      Entry: 6
+      Data: 
     - Name: AllCommonView
       Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[UnityEngine.RectTransform, UnityEngine.CoreModule]],
+      Data: 4|System.Collections.Generic.List`1[[UnityEngine.RectTransform, UnityEngine.CoreModule]],
         mscorlib
     - Name: 
       Entry: 12
@@ -117,7 +131,7 @@ MonoBehaviour:
       Data: 
     - Name: AllCreateView
       Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[UnityEngine.RectTransform, UnityEngine.CoreModule]],
+      Data: 5|System.Collections.Generic.List`1[[UnityEngine.RectTransform, UnityEngine.CoreModule]],
         mscorlib
     - Name: 
       Entry: 12
@@ -129,11 +143,11 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: AllPopupViewParent
-      Entry: 10
-      Data: 2
+      Entry: 6
+      Data: 
     - Name: AllPopupView
       Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[UnityEngine.RectTransform, UnityEngine.CoreModule]],
+      Data: 6|System.Collections.Generic.List`1[[UnityEngine.RectTransform, UnityEngine.CoreModule]],
         mscorlib
     - Name: 
       Entry: 12
@@ -150,21 +164,24 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: PanelSplitEditorShowData
+      Entry: 6
+      Data: 
   ComponentTable: {fileID: 0}
   DataTable: {fileID: 0}
-  EventTable: {fileID: 3315759643925799560}
-  PkgName: Lobby
-  ResName: LobbyPanel
-  UICodeType: 0
+  EventTable: {fileID: 5898289215828210653}
+  PkgName: 
+  ResName: 
+  UICodeType: 2
   WindowOption: 0
   PanelLayer: 3
-  PanelOption: 4
+  PanelOption: 0
   PanelStackOption: 2
   ViewWindowType: 0
   ViewStackOption: 2
   CachePanelTime: 10
   Priority: 0
---- !u!114 &3315759643925799560
+--- !u!114 &5898289215828210653
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,7 +197,7 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 3315759643925799560}
+    - {fileID: 5898289215828210653}
     - {fileID: 367168042472313888}
     SerializedBytesString: 
     Prefab: {fileID: 0}
@@ -189,8 +206,8 @@ MonoBehaviour:
     SerializationNodes:
     - Name: m_EventDic
       Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[YIUIFramework.UIEventBase,
-        ET.YIUIFramework]], mscorlib
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[Zeng.GameFrame.UIS.UIEventBase,
+        zeng.gameframe.ui]], mscorlib
     - Name: comparer
       Entry: 7
       Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
@@ -209,14 +226,14 @@ MonoBehaviour:
       Data: u_EventEnterMap
     - Name: $v
       Entry: 7
-      Data: 2|YIUIFramework.UITaskEventP0, ET.YIUIFramework
+      Data: 2|Zeng.GameFrame.UIS.UIEventP0, zeng.gameframe.ui
     - Name: m_EventName
       Entry: 1
       Data: u_EventEnterMap
     - Name: AllEventParamType
       Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[YIUIFramework.EUIEventParamType,
-        ET.YIUIFramework]], mscorlib
+      Data: 3|System.Collections.Generic.List`1[[Zeng.GameFrame.UIS.EUIEventParamType,
+        zeng.gameframe.ui]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -228,7 +245,8 @@ MonoBehaviour:
       Data: 
     - Name: OnRemoveAction
       Entry: 7
-      Data: 4|System.Action`1[[YIUIFramework.UIEventBase, ET.YIUIFramework]], mscorlib
+      Data: 4|System.Action`1[[Zeng.GameFrame.UIS.UIEventBase, zeng.gameframe.ui]],
+        mscorlib
     - Name: target
       Entry: 10
       Data: 0
@@ -237,7 +255,7 @@ MonoBehaviour:
       Data: 5|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: YIUIFramework.UIBindEventTable, ET.YIUIFramework
+      Data: Zeng.GameFrame.UIS.UIBindEventTable, zeng.gameframe.ui
     - Name: 
       Entry: 8
       Data: 
@@ -249,7 +267,8 @@ MonoBehaviour:
       Data: 6|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: System.Action`1[[YIUIFramework.UIEventBase, ET.YIUIFramework]], mscorlib
+      Data: System.Action`1[[Zeng.GameFrame.UIS.UIEventBase, zeng.gameframe.ui]],
+        mscorlib
     - Name: 
       Entry: 8
       Data: 
@@ -264,7 +283,7 @@ MonoBehaviour:
       Data: 8|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: YIUIFramework.UIEventBase, ET.YIUIFramework
+      Data: Zeng.GameFrame.UIS.UIEventBase, zeng.gameframe.ui
     - Name: 
       Entry: 8
       Data: 
@@ -279,8 +298,8 @@ MonoBehaviour:
       Data: 
     - Name: m_Binds
       Entry: 7
-      Data: 9|System.Collections.Generic.List`1[[YIUIFramework.UIEventBind, ET.YIUIFramework]],
-        mscorlib
+      Data: 9|System.Collections.Generic.List`1[[Zeng.GameFrame.UIS.UIEventBind,
+        zeng.gameframe.ui]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
@@ -307,8 +326,8 @@ MonoBehaviour:
       Data: 
     - Name: AllEventParamType
       Entry: 7
-      Data: 10|System.Collections.Generic.List`1[[YIUIFramework.EUIEventParamType,
-        ET.YIUIFramework]], mscorlib
+      Data: 10|System.Collections.Generic.List`1[[Zeng.GameFrame.UIS.EUIEventParamType,
+        zeng.gameframe.ui]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -640,7 +659,7 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 3315759643925799560}
+    - {fileID: 5898289215828210653}
     - {fileID: 367168042472313888}
     SerializedBytesString: 
     Prefab: {fileID: 0}
@@ -655,14 +674,14 @@ MonoBehaviour:
       Data: u_EventEnterMap
     - Name: m_UIEvent
       Entry: 7
-      Data: 0|YIUIFramework.UITaskEventP0, ET.YIUIFramework
+      Data: 0|Zeng.GameFrame.UIS.UIEventP0, zeng.gameframe.ui
     - Name: m_EventName
       Entry: 1
       Data: u_EventEnterMap
     - Name: AllEventParamType
       Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[YIUIFramework.EUIEventParamType,
-        ET.YIUIFramework]], mscorlib
+      Data: 1|System.Collections.Generic.List`1[[Zeng.GameFrame.UIS.EUIEventParamType,
+        zeng.gameframe.ui]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -674,7 +693,8 @@ MonoBehaviour:
       Data: 
     - Name: OnRemoveAction
       Entry: 7
-      Data: 2|System.Action`1[[YIUIFramework.UIEventBase, ET.YIUIFramework]], mscorlib
+      Data: 2|System.Action`1[[Zeng.GameFrame.UIS.UIEventBase, zeng.gameframe.ui]],
+        mscorlib
     - Name: target
       Entry: 10
       Data: 0
@@ -683,7 +703,7 @@ MonoBehaviour:
       Data: 3|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: YIUIFramework.UIBindEventTable, ET.YIUIFramework
+      Data: Zeng.GameFrame.UIS.UIBindEventTable, zeng.gameframe.ui
     - Name: 
       Entry: 8
       Data: 
@@ -695,7 +715,8 @@ MonoBehaviour:
       Data: 4|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: System.Action`1[[YIUIFramework.UIEventBase, ET.YIUIFramework]], mscorlib
+      Data: System.Action`1[[Zeng.GameFrame.UIS.UIEventBase, zeng.gameframe.ui]],
+        mscorlib
     - Name: 
       Entry: 8
       Data: 
@@ -710,7 +731,7 @@ MonoBehaviour:
       Data: 6|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: YIUIFramework.UIEventBase, ET.YIUIFramework
+      Data: Zeng.GameFrame.UIS.UIEventBase, zeng.gameframe.ui
     - Name: 
       Entry: 8
       Data: 
@@ -725,8 +746,8 @@ MonoBehaviour:
       Data: 
     - Name: m_Binds
       Entry: 7
-      Data: 7|System.Collections.Generic.List`1[[YIUIFramework.UIEventBind, ET.YIUIFramework]],
-        mscorlib
+      Data: 7|System.Collections.Generic.List`1[[Zeng.GameFrame.UIS.UIEventBind,
+        zeng.gameframe.ui]], mscorlib
     - Name: 
       Entry: 12
       Data: 1

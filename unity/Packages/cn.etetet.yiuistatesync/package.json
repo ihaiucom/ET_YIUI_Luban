@@ -15,16 +15,6 @@
   },
   "relatedPackages": {},
   "dependencies": {
-    "cn.etetet.statesync": "3.0.11",
-    "cn.etetet.packagemanager": "1.0.5",
-    "cn.etetet.yiuiframework": "2.0.0",
-    "cn.etetet.yiuiyooassets": "2.0.0",
-    "cn.etetet.yiuiloopscrollrectasync": "2.0.0",
-    "cn.etetet.yiuigm": "2.0.0",
-    "cn.etetet.yiuireddot": "2.0.0",
-    "cn.etetet.yiuitips": "2.0.0",
-    "cn.etetet.yiui3ddisplay": "2.0.0",
-    "cn.etetet.yiuieffect": "2.0.0"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@ET-Packages"

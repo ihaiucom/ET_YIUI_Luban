@@ -106,7 +106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1877877037891376090}
   - component: {fileID: 1403993386029537731}
-  - component: {fileID: 2835439186386774488}
+  - component: {fileID: 4519278896838562625}
   m_Layer: 5
   m_Name: MainPanel
   m_TagString: Untagged
@@ -145,7 +145,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4055638765398378464}
   m_CullTransparentMesh: 1
---- !u!114 &2835439186386774488
+--- !u!114 &4519278896838562625
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,16 +154,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4055638765398378464}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76af6b314c984a70bd77fd9c0d998f89, type: 3}
+  m_Script: {fileID: 11500000, guid: ca57abc2bdf669649b99e8935e209d08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 4055638765398378464}
-    - {fileID: 3555634494800914482}
-    - {fileID: 8149108729388203870}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -171,8 +168,8 @@ MonoBehaviour:
     SerializationNodes:
     - Name: AllChildCdeTable
       Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[YIUIFramework.UIBindCDETable, ET.YIUIFramework]],
-        mscorlib
+      Data: 0|System.Collections.Generic.List`1[[Zeng.GameFrame.UIS.UIBindCDETable,
+        zeng.gameframe.ui]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -182,24 +179,41 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: m_PackagesName
-      Entry: 1
-      Data: yiuistatesync
+    - Name: m_AllChildUIBase
+      Entry: 7
+      Data: 1|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[Zeng.GameFrame.UIS.UIBase,
+        zeng.gameframe.ui]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 2|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: IsSplitData
       Entry: 5
       Data: false
     - Name: PanelSplitData
       Entry: 7
-      Data: 1|YIUIFramework.UIPanelSplitData, ET.YIUIFramework
+      Data: 3|Zeng.GameFrame.UIS.UIPanelSplitData, zeng.gameframe.ui
     - Name: Panel
-      Entry: 10
-      Data: 0
+      Entry: 6
+      Data: 
     - Name: AllViewParent
-      Entry: 10
-      Data: 1
+      Entry: 6
+      Data: 
     - Name: AllCommonView
       Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[UnityEngine.RectTransform, UnityEngine.CoreModule]],
+      Data: 4|System.Collections.Generic.List`1[[UnityEngine.RectTransform, UnityEngine.CoreModule]],
         mscorlib
     - Name: 
       Entry: 12
@@ -212,7 +226,7 @@ MonoBehaviour:
       Data: 
     - Name: AllCreateView
       Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[UnityEngine.RectTransform, UnityEngine.CoreModule]],
+      Data: 5|System.Collections.Generic.List`1[[UnityEngine.RectTransform, UnityEngine.CoreModule]],
         mscorlib
     - Name: 
       Entry: 12
@@ -224,11 +238,11 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: AllPopupViewParent
-      Entry: 10
-      Data: 2
+      Entry: 6
+      Data: 
     - Name: AllPopupView
       Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[UnityEngine.RectTransform, UnityEngine.CoreModule]],
+      Data: 6|System.Collections.Generic.List`1[[UnityEngine.RectTransform, UnityEngine.CoreModule]],
         mscorlib
     - Name: 
       Entry: 12
@@ -245,15 +259,18 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: PanelSplitEditorShowData
+      Entry: 6
+      Data: 
   ComponentTable: {fileID: 0}
   DataTable: {fileID: 0}
   EventTable: {fileID: 0}
-  PkgName: Main
-  ResName: MainPanel
-  UICodeType: 0
+  PkgName: 
+  ResName: 
+  UICodeType: 2
   WindowOption: 0
   PanelLayer: 3
-  PanelOption: 4
+  PanelOption: 0
   PanelStackOption: 2
   ViewWindowType: 0
   ViewStackOption: 2
