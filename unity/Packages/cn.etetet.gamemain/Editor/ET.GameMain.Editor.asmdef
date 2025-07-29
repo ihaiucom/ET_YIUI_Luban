@@ -1,5 +1,5 @@
 {
-    "name": "ET.StateSync.Editor",
+    "name": "ET.GameMain.Editor",
     "rootNamespace": "",
     "references": [
         "GUID:000a53018e5e7c14aa75273e1f7be8e2",

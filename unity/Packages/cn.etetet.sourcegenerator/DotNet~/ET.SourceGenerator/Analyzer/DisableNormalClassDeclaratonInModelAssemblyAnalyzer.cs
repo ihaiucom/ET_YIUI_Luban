@@ -53,6 +53,11 @@ namespace ET
                 return;
             }
             
+            if (namedTypeSymbol.HasAttribute(Definition.DisableAnalyzerAttribute))
+            {
+                return;
+            }
+            
             Diagnostic diagnostic = Diagnostic.Create(EntityClassDeclarationAnalyzerrRule.Rule, classDeclarationSyntax.Identifier.GetLocation(), namedTypeSymbol);
             context.ReportDiagnostic(diagnostic);
         }

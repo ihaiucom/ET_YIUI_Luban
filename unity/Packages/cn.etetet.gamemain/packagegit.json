@@ -3,6 +3,9 @@
 "Name": "Game.Main",
 "ScriptsReferences": {
   "ModelView": [
+    "UniTask",
+    "LitMotion",
+    "LitMotion.Extensions",
     "ET.Core",
     "Unity.Mathematics",
     "ET.Loader",
@@ -17,6 +20,9 @@
     "ET.Recast"
   ],
   "HotfixView": [
+    "UniTask",
+    "LitMotion",
+    "LitMotion.Extensions",
     "ET.Core",
     "Unity.Mathematics",
     "ET.Loader",

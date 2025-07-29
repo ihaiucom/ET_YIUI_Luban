@@ -2,6 +2,9 @@
     "name": "ET.ModelView",
     "rootNamespace": "ET",
     "references": [
+        "UniTask",
+        "LitMotion",
+        "LitMotion.Extensions",
         "ET.Core",
         "ET.Init",
         "ET.Loader",

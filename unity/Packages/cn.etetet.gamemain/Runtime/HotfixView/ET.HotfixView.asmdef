@@ -2,6 +2,9 @@
     "name": "ET.HotfixView",
     "rootNamespace": "ET",
     "references": [
+        "UniTask",
+        "LitMotion",
+        "LitMotion.Extensions",
         "ET.Core",
         "ET.Hotfix",
         "ET.Init",
