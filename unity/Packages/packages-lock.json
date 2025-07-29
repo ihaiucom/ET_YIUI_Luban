@@ -428,9 +428,9 @@
       }
     },
     "zeng.gameframe.ui": {
-      "version": "file:E:/zengfeng/githubs/zeng.gameframe.ugui/unity/Assets/gameframe/ui",
+      "version": "file:zeng.gameframe.ugui",
       "depth": 0,
-      "source": "local",
+      "source": "embedded",
       "dependencies": {}
     },
     "zeng.odininspector": {

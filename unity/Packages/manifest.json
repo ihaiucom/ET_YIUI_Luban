@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "zeng.gameframe.ui": "file:E:/zengfeng/githubs/zeng.gameframe.ugui/unity/Assets/gameframe/ui",
     "com.annulusgames.lit-motion": "file:E:/zengfeng/githubs/LitMotion/src/LitMotion/Assets/LitMotion",
     "com.cysharp.unitask": "file:E:/zengfeng/githubs/UniTask/src/UniTask/Assets/Plugins/UniTask",
     "zeng.odininspector": "file:E:/zengfeng/githubs/zeng.Sirenix/Sirenix",

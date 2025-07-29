@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53eea31460b64e49b08b432fcbdba93b, type: 3}
+  m_Name: UISettingConfigEditor
+  m_EditorClassIdentifier: 
+  UIProjectName: UI
+  UINamespace: Games.UI
+  UIProjectEditorPath: Assets/Editor/UI
+  UIProjectResPath: Assets/GameRes/UI
+  UIProjectPackageResPath: Packages/cn.etetet.gameui/Assets/GameRes/UI
+  UIGenerationPath: Packages/cn.etetet.gameui/Scripts/ModelView/Client/UIGeneration
+  UICodeScriptsPath: Packages/cn.etetet.gameui/Scripts/HotfixView/Client/UI
+  UIFrameworkPath: Packages/zeng.gameframe.ugui
+  UITemplatePath: Packages/zeng.gameframe.ugui/UIEditor/CodeTemplate
+  UIRootPrefabPath: Packages/zeng.gameframe.ugui/UIEditor/UIRootPrefab/UIRoot.prefab
+  UIPanelName: Panel
+  UIViewName: View
+  UIPrefabs: Prefabs
+  UIPrefabsCN: "\u9884\u5236"
+  UISprites: Sprites
+  UISpritesCN: "\u7CBE\u7075"
+  UIAtlas: Atlas
+  UIAtlasCN: "\u56FE\u96C6"
+  UISource: Source
+  UISourceCN: "\u6E90\u6587\u4EF6"
+  UIAtlasIgnore: AtlasIgnore
+  UISpritesAtlas1: Atlas1
+  UIAllViewParentName: AllViewParent
+  UIAllPopupViewParentName: AllPopupViewParent
