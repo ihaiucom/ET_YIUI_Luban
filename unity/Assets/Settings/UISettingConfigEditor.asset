@@ -14,9 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIProjectName: UI
   UINamespace: Games.UI
-  UIProjectEditorPath: Assets/Editor/UI
-  UIProjectResPath: Assets/GameRes/UI
-  UIProjectPackageResPath: Packages/cn.etetet.gameui/Assets/GameRes/UI
+  UIProjectResPath: GameRes/UI
+  UIProjectPackageResPath: Packages/cn.etetet.gameui/GameRes/UI
   UIGenerationPath: Packages/cn.etetet.gameui/Scripts/ModelView/Client/UIGeneration
   UICodeScriptsPath: Packages/cn.etetet.gameui/Scripts/HotfixView/Client/UI
   UIFrameworkPath: Packages/zeng.gameframe.ugui

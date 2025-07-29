@@ -38,6 +38,7 @@
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
+        <Compile Remove="..\..\..\cn.etetet.yiuiframework\**" />
     </ItemGroup>
 
     <Target Name="CustomAfterBuild" AfterTargets="Build">
