@@ -66,6 +66,12 @@ namespace Games.UI.Login
                 this.u_ComAccount.text, 
                 this.u_ComPassword.text).NoContext();
         }
+        
+        protected override void OnEventClickTestBtnAction()
+        {
+            Debug.Log($"OnEventClickTestBtnAction ~~~~~~~3");
+            TestStaticClassReload.Test();
+        }
          #endregion Event结束
 
     }

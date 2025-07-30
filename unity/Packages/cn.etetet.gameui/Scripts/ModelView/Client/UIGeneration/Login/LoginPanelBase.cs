@@ -27,6 +27,8 @@ namespace Games.UI.Login
         [ShowInInspector] public UnityEngine.UI.InputField u_ComPassword { get; private set; }
         [ShowInInspector] protected UIEventP0 u_EventLogin { get; private set; }
         [ShowInInspector] protected UIEventHandleP0 u_EventLoginHandle { get; private set; }
+        [ShowInInspector] protected UIEventP0 u_EventClickTestBtn { get; private set; }
+        [ShowInInspector] protected UIEventHandleP0 u_EventClickTestBtnHandle { get; private set; }
 
         
         protected sealed override void UIBind()
@@ -35,16 +37,20 @@ namespace Games.UI.Login
             u_ComPassword = ComponentTable.FindComponent<UnityEngine.UI.InputField>("u_ComPassword");
             u_EventLogin = EventTable.FindEvent<UIEventP0>("u_EventLogin");
             u_EventLoginHandle = u_EventLogin.Add(OnEventLoginAction);
+            u_EventClickTestBtn = EventTable.FindEvent<UIEventP0>("u_EventClickTestBtn");
+            u_EventClickTestBtnHandle = u_EventClickTestBtn.Add(OnEventClickTestBtnAction);
 
         }
 
         protected sealed override void UnUIBind()
         {
             u_EventLogin.Remove(u_EventLoginHandle);
+            u_EventClickTestBtn.Remove(u_EventClickTestBtnHandle);
 
         }
      
         protected virtual void OnEventLoginAction(){}
+        protected virtual void OnEventClickTestBtnAction(){}
    
    
     }
