@@ -258,7 +258,6 @@ Transform:
   - {fileID: 1637747976}
   - {fileID: 630054496}
   - {fileID: 590194895}
-  - {fileID: 1953185547}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &575235022
@@ -350,6 +349,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 575235020}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &720993880 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 806950166230494048, guid: fa125205f764c7f4f99bb8d1a9e9a9ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 1953185546}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1070595751
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,8 +620,13 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 575235020}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2808024067503725831, guid: fa125205f764c7f4f99bb8d1a9e9a9ce,
+        type: 3}
+      propertyPath: m_CameraType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4265219785936634336, guid: fa125205f764c7f4f99bb8d1a9e9a9ce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -640,17 +650,17 @@ PrefabInstance:
     - target: {fileID: 4265219785936634336, guid: fa125205f764c7f4f99bb8d1a9e9a9ce,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4265219785936634336, guid: fa125205f764c7f4f99bb8d1a9e9a9ce,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4265219785936634336, guid: fa125205f764c7f4f99bb8d1a9e9a9ce,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4265219785936634336, guid: fa125205f764c7f4f99bb8d1a9e9a9ce,
         type: 3}
@@ -677,12 +687,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa125205f764c7f4f99bb8d1a9e9a9ce, type: 3}
---- !u!4 &1953185547 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4265219785936634336, guid: fa125205f764c7f4f99bb8d1a9e9a9ce,
-    type: 3}
-  m_PrefabInstance: {fileID: 1953185546}
-  m_PrefabAsset: {fileID: 0}
 --- !u!850595691 &1972482029
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -797,7 +801,8 @@ MonoBehaviour:
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
-  m_Cameras: []
+  m_Cameras:
+  - {fileID: 720993880}
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
@@ -990,3 +995,4 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 575235020}
+  - {fileID: 1953185546}

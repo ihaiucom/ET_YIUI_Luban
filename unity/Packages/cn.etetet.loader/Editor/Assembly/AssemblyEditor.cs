@@ -30,6 +30,13 @@ namespace ET
         /// </summary>
         static void OnExitingEditMode()
         {
+            Debug.Log("OnExitingPlayMode");
+            GlobalConfig globalConfig = Resources.Load<GlobalConfig>("GlobalConfig");
+            if (!globalConfig.EnableDll)
+            {
+                return;
+            }
+            
             foreach (string dll in DllNames)
             {
                 string dllFile = $"{Application.dataPath}/../Library/ScriptAssemblies/{dll}.dll";

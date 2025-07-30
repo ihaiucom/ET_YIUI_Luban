@@ -14,9 +14,18 @@ namespace ET
 
         private Dictionary<string, TextAsset> dlls;
         private Dictionary<string, TextAsset> aotDlls;
+        private bool enableDll;
 
         public void Awake()
         {
+            if (Define.IsEditor)
+            {
+                this.enableDll = Resources.Load<GlobalConfig>("GlobalConfig").EnableDll;
+            }
+            else
+            {
+                this.enableDll = true;
+            }
         }
 
         private async ETTask DownloadAsync()
@@ -60,12 +69,36 @@ namespace ET
             }
             else
             {
-                byte[] modelAssBytes = File.ReadAllBytes(Path.Combine(Define.CodeDir, "ET.Model.dll.bytes"));
-                byte[] modelPdbBytes = File.ReadAllBytes(Path.Combine(Define.CodeDir, "ET.Model.pdb.bytes"));
-                byte[] modelViewAssBytes = File.ReadAllBytes(Path.Combine(Define.CodeDir, "ET.ModelView.dll.bytes"));
-                byte[] modelViewPdbBytes = File.ReadAllBytes(Path.Combine(Define.CodeDir, "ET.ModelView.pdb.bytes"));
-                this.modelAssembly = Assembly.Load(modelAssBytes, modelPdbBytes);
-                this.modelViewAssembly = Assembly.Load(modelViewAssBytes, modelViewPdbBytes);
+                if (this.enableDll)
+                {
+                    byte[] modelAssBytes = File.ReadAllBytes(Path.Combine(Define.CodeDir, "ET.Model.dll.bytes"));
+                    byte[] modelPdbBytes = File.ReadAllBytes(Path.Combine(Define.CodeDir, "ET.Model.pdb.bytes"));
+                    byte[] modelViewAssBytes = File.ReadAllBytes(Path.Combine(Define.CodeDir, "ET.ModelView.dll.bytes"));
+                    byte[] modelViewPdbBytes = File.ReadAllBytes(Path.Combine(Define.CodeDir, "ET.ModelView.pdb.bytes"));
+                    this.modelAssembly = Assembly.Load(modelAssBytes, modelPdbBytes);
+                    this.modelViewAssembly = Assembly.Load(modelViewAssBytes, modelViewPdbBytes);
+                }
+                else
+                {
+                    Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies();
+                    foreach (Assembly ass in assemblies)
+                    {
+                        string name = ass.GetName().Name;
+                        if (name == "ET.Model")
+                        {
+                            this.modelAssembly = ass;
+                        }
+                        else if (name == "ET.ModelView")
+                        {
+                            this.modelViewAssembly = ass;
+                        }
+
+                        if (this.modelAssembly != null && this.modelViewAssembly != null)
+                        {
+                            break;
+                        }
+                    }
+                }
             }
             
             (Assembly hotfixAssembly, Assembly hotfixViewAssembly) = this.LoadHotfix();
