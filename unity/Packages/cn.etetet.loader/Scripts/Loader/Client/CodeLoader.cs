@@ -30,7 +30,7 @@ namespace ET
 
         private async ETTask DownloadAsync()
         {
-            if (!Define.IsEditor)
+            if (!Define.IsEditor && enableDll)
             {
                 this.dlls = await ResourcesComponent.Instance.LoadAllAssetsAsync<TextAsset>($"Packages/cn.etetet.loader/Bundles/Code/ET.Model.dll.bytes");
                 if (Define.EnableIL2CPP)
@@ -137,12 +137,37 @@ namespace ET
             }
             else
             {
-                hotfixAssBytes = File.ReadAllBytes(Path.Combine(Define.CodeDir, "ET.Hotfix.dll.bytes"));
-                hotfixPdbBytes = File.ReadAllBytes(Path.Combine(Define.CodeDir, "ET.Hotfix.pdb.bytes"));
-                hotfixViewAssBytes = File.ReadAllBytes(Path.Combine(Define.CodeDir, "ET.HotfixView.dll.bytes"));
-                hotfixViewPdbBytes = File.ReadAllBytes(Path.Combine(Define.CodeDir, "ET.HotfixView.pdb.bytes"));
-                hotfixAssembly = Assembly.Load(hotfixAssBytes, hotfixPdbBytes);
-                hotfixViewAssembly = Assembly.Load(hotfixViewAssBytes, hotfixViewPdbBytes);
+
+                if (this.enableDll)
+                {
+                    hotfixAssBytes = File.ReadAllBytes(Path.Combine(Define.CodeDir, "ET.Hotfix.dll.bytes"));
+                    hotfixPdbBytes = File.ReadAllBytes(Path.Combine(Define.CodeDir, "ET.Hotfix.pdb.bytes"));
+                    hotfixViewAssBytes = File.ReadAllBytes(Path.Combine(Define.CodeDir, "ET.HotfixView.dll.bytes"));
+                    hotfixViewPdbBytes = File.ReadAllBytes(Path.Combine(Define.CodeDir, "ET.HotfixView.pdb.bytes"));
+                    hotfixAssembly = Assembly.Load(hotfixAssBytes, hotfixPdbBytes);
+                    hotfixViewAssembly = Assembly.Load(hotfixViewAssBytes, hotfixViewPdbBytes);
+                }
+                else
+                {
+                    Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies();
+                    foreach (Assembly ass in assemblies)
+                    {
+                        string name = ass.GetName().Name;
+                        if (name == "ET.Hotfix")
+                        {
+                            hotfixAssembly = ass;
+                        }
+                        else if (name == "ET.HotfixView")
+                        {
+                            hotfixViewAssembly = ass;
+                        }
+
+                        if (hotfixAssembly != null && hotfixViewAssembly != null)
+                        {
+                            break;
+                        }
+                    }
+                }
             }
             
             return (hotfixAssembly, hotfixViewAssembly);

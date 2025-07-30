@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using Games.UI.Login;
 using I2.Loc;
+using UnityEngine;
 using Zeng.GameFrame.UIS;
 
 namespace ET.Client
