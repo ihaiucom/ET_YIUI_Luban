@@ -4,6 +4,8 @@ using Zeng.GameFrame.UIS;
 using UnityEngine;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using ET;
+using ET.Client;
 
 namespace Games.UI.Lobby
 {
@@ -51,12 +53,11 @@ namespace Games.UI.Lobby
         #endregion
 
         #region Event开始
-
-
-       
-        protected override void OnEventEnterMapAction()
+        protected override async UniTask OnEventEnterMapAction()
         {
-            
+            Scene root = GameClient.Instance.Root;
+            await EnterMapHelper.EnterMapAsync(root);
+            await this.CloseAsync();
         }
          #endregion Event结束
 

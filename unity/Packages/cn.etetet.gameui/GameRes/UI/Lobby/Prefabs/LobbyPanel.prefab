@@ -198,7 +198,7 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 5898289215828210653}
-    - {fileID: 367168042472313888}
+    - {fileID: 4776094250030844675}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -226,7 +226,7 @@ MonoBehaviour:
       Data: u_EventEnterMap
     - Name: $v
       Entry: 7
-      Data: 2|Zeng.GameFrame.UIS.UIEventP0, zeng.gameframe.ui
+      Data: 2|Zeng.GameFrame.UIS.UITaskEventP0, zeng.gameframe.ui
     - Name: m_EventName
       Entry: 1
       Data: u_EventEnterMap
@@ -560,7 +560,7 @@ GameObject:
   - component: {fileID: 8758208131642672502}
   - component: {fileID: 8865409431131870438}
   - component: {fileID: 8632552180549481624}
-  - component: {fileID: 367168042472313888}
+  - component: {fileID: 4776094250030844675}
   m_Layer: 5
   m_Name: EnterMap
   m_TagString: Untagged
@@ -643,7 +643,7 @@ MonoBehaviour:
   scaleTime: 0
   popTime: 0
   ease: 24
---- !u!114 &367168042472313888
+--- !u!114 &4776094250030844675
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -660,7 +660,7 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 5898289215828210653}
-    - {fileID: 367168042472313888}
+    - {fileID: 4776094250030844675}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -674,7 +674,7 @@ MonoBehaviour:
       Data: u_EventEnterMap
     - Name: m_UIEvent
       Entry: 7
-      Data: 0|Zeng.GameFrame.UIS.UIEventP0, zeng.gameframe.ui
+      Data: 0|Zeng.GameFrame.UIS.UITaskEventP0, zeng.gameframe.ui
     - Name: m_EventName
       Entry: 1
       Data: u_EventEnterMap

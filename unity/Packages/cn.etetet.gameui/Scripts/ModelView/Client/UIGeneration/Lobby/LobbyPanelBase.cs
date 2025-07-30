@@ -23,13 +23,13 @@ namespace Games.UI.Lobby
         [ShowInInspector]
         public const string ResName = "LobbyPanel";
         
-        [ShowInInspector] protected UIEventP0 u_EventEnterMap { get; private set; }
-        [ShowInInspector] protected UIEventHandleP0 u_EventEnterMapHandle { get; private set; }
+        [ShowInInspector] protected UITaskEventP0 u_EventEnterMap { get; private set; }
+        [ShowInInspector] protected UITaskEventHandleP0 u_EventEnterMapHandle { get; private set; }
 
         
         protected sealed override void UIBind()
         {
-            u_EventEnterMap = EventTable.FindEvent<UIEventP0>("u_EventEnterMap");
+            u_EventEnterMap = EventTable.FindEvent<UITaskEventP0>("u_EventEnterMap");
             u_EventEnterMapHandle = u_EventEnterMap.Add(OnEventEnterMapAction);
 
         }
@@ -40,7 +40,7 @@ namespace Games.UI.Lobby
 
         }
      
-        protected virtual void OnEventEnterMapAction(){}
+        protected virtual async UniTask OnEventEnterMapAction(){await UniTask.CompletedTask;}
    
    
     }

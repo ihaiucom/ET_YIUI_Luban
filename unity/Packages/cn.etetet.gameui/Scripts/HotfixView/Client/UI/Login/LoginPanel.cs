@@ -4,6 +4,9 @@ using Zeng.GameFrame.UIS;
 using UnityEngine;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using ET;
+using ET.Client;
+using UnityEngine.UI;
 
 namespace Games.UI.Login
 {
@@ -56,7 +59,12 @@ namespace Games.UI.Login
        
         protected override void OnEventLoginAction()
         {
-            
+            GlobalComponent globalComponent = GameClient.Instance.Root.GetComponent<GlobalComponent>();
+            LoginHelper.Login(
+                GameClient.Instance.Root, 
+                globalComponent.GlobalConfig.Address,
+                this.u_ComAccount.text, 
+                this.u_ComPassword.text).NoContext();
         }
          #endregion Event结束
 

@@ -1,9 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using Games.UI.Login;
+
 using I2.Loc;
-using UnityEngine;
 using Zeng.GameFrame.UIS;
 
 namespace ET.Client
@@ -20,9 +16,11 @@ namespace ET.Client
             root.AddComponent<PlayerComponent>();
             root.AddComponent<CurrentScenesComponent>();
             
+            World.Instance.AddSingleton<GameClient, Scene>(root);
+            
             await InitUIAsync();
             
-            // await EventSystem.Instance.PublishAsync(root, new AppStartInitFinish());
+            await EventSystem.Instance.PublishAsync(root, new AppStartInitFinish());
         }
         
         
@@ -42,7 +40,7 @@ namespace ET.Client
             await MgrCenter.I.Register(CountDownMgr.I);
             await MgrCenter.I.Register(UIManager.I);
                 
-            UIManager.I.OpenPanel<LoginPanel>();
+            // UIManager.I.OpenPanel<LoginPanel>();
             // UIManager.I.OpenPanel<HomePanel>();
             // UIManager.I.OpenPanel<RoleSelectPanel>();
             
