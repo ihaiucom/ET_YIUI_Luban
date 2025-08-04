@@ -1,0 +1,14 @@
+{
+  "name": "cn.etetet.gamebattlelockstep",
+  "displayName": "ET.GameBattleLockStep",
+  "version": "1.0.0",
+  "unity": "2022.3",
+  "description": "game Battle LockStep",
+  "author": {
+    "name": "zengfeng",
+    "url": "ihaiu.com"
+  },
+  "relatedPackages": {},
+  "dependencies": {
+  }
+}

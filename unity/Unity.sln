@@ -139,6 +139,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ignore.ET.Recast", "Ignore.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ignore.ET.NetInner", "Ignore.ET.NetInner.csproj", "{301e6f6f-b223-ae98-2a13-9bb22ff8fb0d}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ignore.ET.GameBattleLockStep", "Ignore.ET.GameBattleLockStep.csproj", "{740565f8-f469-b8a3-227a-2548bb8d1581}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ignore.ET.DB", "Ignore.ET.DB.csproj", "{978e3006-0d22-db98-2c57-f8bc59cab4e4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ignore.ET.Game.UI", "Ignore.ET.Game.UI.csproj", "{fae3d355-6e5f-0b68-27ad-827f8ac67493}"
@@ -296,6 +298,8 @@ Global
 		{175f254c-8f4d-0c22-4bd3-22348ceeec5b}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{301e6f6f-b223-ae98-2a13-9bb22ff8fb0d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{301e6f6f-b223-ae98-2a13-9bb22ff8fb0d}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{740565f8-f469-b8a3-227a-2548bb8d1581}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{740565f8-f469-b8a3-227a-2548bb8d1581}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{978e3006-0d22-db98-2c57-f8bc59cab4e4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{978e3006-0d22-db98-2c57-f8bc59cab4e4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{fae3d355-6e5f-0b68-27ad-827f8ac67493}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

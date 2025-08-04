@@ -50,6 +50,12 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "cn.etetet.gamebattlelockstep": {
+      "version": "file:cn.etetet.gamebattlelockstep",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "cn.etetet.gamelockstep": {
       "version": "file:cn.etetet.gamelockstep",
       "depth": 0,
