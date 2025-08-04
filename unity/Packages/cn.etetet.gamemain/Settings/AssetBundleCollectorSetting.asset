@@ -113,6 +113,14 @@ MonoBehaviour:
         FilterRuleName: CollectPrefab
         AssetTags: 
         UserData: 
+      - CollectPath: Packages/cn.etetet.gamemain/Bundles/UI
+        CollectorGUID: aa0d26cfd9cbbb9498ee3cc408ec5f4e
+        CollectorType: 0
+        AddressRuleName: AddressDisable
+        PackRuleName: PackSeparately
+        FilterRuleName: CollectPrefab
+        AssetTags: 
+        UserData: 
     - GroupName: Unit
       GroupDesc: 
       AssetTags: 

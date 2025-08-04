@@ -1,6 +1,6 @@
-﻿namespace ET.Server
+namespace ET.Server
 {
-    [Event(SceneType.StateSync)]
+    [Event(SceneType.LockStep)]
     public class EntryEvent2_InitServer: AEvent<Scene, EntryEvent2>
     {
         protected override async ETTask Run(Scene root, EntryEvent2 args)
@@ -9,8 +9,6 @@
             {
                 root.AddComponent<ConsoleComponent>();
             }
-            
-            World.Instance.AddSingleton<NavmeshComponent>();
             
             int process = root.Fiber.Process;
             StartProcessConfig startProcessConfig = StartProcessConfigCategory.Instance.Get(process);
@@ -21,10 +19,8 @@
 
             // 根据配置创建纤程
             var scenes = StartSceneConfigCategory.Instance.GetByProcess(process);
-            
             foreach (StartSceneConfig startConfig in scenes)
             {
-                
                 int sceneType = SceneTypeSingleton.Instance.GetSceneType(startConfig.SceneType);
                 await FiberManager.Instance.Create(SchedulerType.ThreadPool, startConfig.Id, startConfig.Zone, sceneType, startConfig.Name);
             }

@@ -2,6 +2,6 @@ namespace ET
 {
     public static partial class PackageType
     {
-        public const int StateSync = 200;
+        public const int LockStep = 11;
     }
 }

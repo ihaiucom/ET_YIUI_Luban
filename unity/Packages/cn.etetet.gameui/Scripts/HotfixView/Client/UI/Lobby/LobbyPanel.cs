@@ -3,6 +3,7 @@ using Zeng.GameFrame.UIS;
 
 using UnityEngine;
 using System.Collections.Generic;
+using System.IO;
 using Cysharp.Threading.Tasks;
 using ET;
 using ET.Client;
@@ -56,8 +57,17 @@ namespace Games.UI.Lobby
         protected override async UniTask OnEventEnterMapAction()
         {
             Scene root = GameClient.Instance.Root;
-            await EnterMapHelper.EnterMapAsync(root);
-            await this.CloseAsync();
+            await EnterMapHelper.Match(root.Fiber());
+        }
+        private void OnEventReplayAction2()
+        {
+            string replayPath = "";
+            Scene root = GameClient.Instance.Root;
+            byte[] bytes = File.ReadAllBytes(replayPath);
+            
+            Replay replay = MemoryPackHelper.Deserialize(typeof (Replay), bytes, 0, bytes.Length) as Replay;
+            Log.Debug($"start replay: {replay.Snapshots.Count} {replay.FrameInputs.Count} {replay.UnitInfos.Count}");
+            LSSceneChangeHelper.SceneChangeToReplay(root, replay).NoContext();
         }
          #endregion Event结束
 

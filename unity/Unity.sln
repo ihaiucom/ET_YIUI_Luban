@@ -43,9 +43,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ET.HybridCLR", "ET.HybridCL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Artees.SemanticVersioning", "Artees.SemanticVersioning.csproj", "{b7045808-962f-f73c-0e5d-29563c8f7d19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ET.PackageManager.Editor", "ET.PackageManager.Editor.csproj", "{4eeb6468-7f71-3d7e-2fae-48be08c928b4}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ET.Hotfix", "ET.Hotfix.csproj", "{bf069996-b248-a5f5-5c43-18efc373d2be}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ET.PackageManager.Editor", "ET.PackageManager.Editor.csproj", "{4eeb6468-7f71-3d7e-2fae-48be08c928b4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Rider.Editor", "Unity.Rider.Editor.csproj", "{0de76d01-e2b5-6b43-634d-7958d0d10654}"
 EndProject
@@ -198,10 +198,10 @@ Global
 		{d1436d37-1de0-d49a-4cac-85fcaa66fbbd}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{b7045808-962f-f73c-0e5d-29563c8f7d19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{b7045808-962f-f73c-0e5d-29563c8f7d19}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4eeb6468-7f71-3d7e-2fae-48be08c928b4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4eeb6468-7f71-3d7e-2fae-48be08c928b4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{bf069996-b248-a5f5-5c43-18efc373d2be}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{bf069996-b248-a5f5-5c43-18efc373d2be}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4eeb6468-7f71-3d7e-2fae-48be08c928b4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4eeb6468-7f71-3d7e-2fae-48be08c928b4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0de76d01-e2b5-6b43-634d-7958d0d10654}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0de76d01-e2b5-6b43-634d-7958d0d10654}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{dcdcc333-cb76-cd1f-751b-4e7e18d0e2df}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

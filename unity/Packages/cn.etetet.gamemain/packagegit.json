@@ -3,6 +3,8 @@
 "Name": "Game.Main",
 "ScriptsReferences": {
   "ModelView": [
+    "ET.TrueSync",
+    "ET.LSEntity",
     "UniTask",
     "LitMotion",
     "LitMotion.Extensions",
@@ -14,12 +16,16 @@
     "ET.Init"
   ],
   "Model": [
+    "ET.TrueSync",
+    "ET.LSEntity",
     "ET.Core",
     "Unity.Mathematics",
     "ET.MemoryPack",
     "ET.Recast"
   ],
   "HotfixView": [
+    "ET.TrueSync",
+    "ET.LSEntity",
     "UniTask",
     "LitMotion",
     "LitMotion.Extensions",
@@ -36,6 +42,8 @@
     "ET.Init"
   ],
   "Hotfix": [
+    "ET.TrueSync",
+    "ET.LSEntity",
     "ET.Core",
     "Unity.Mathematics",
     "ET.Loader",

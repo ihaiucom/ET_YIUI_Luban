@@ -75,12 +75,20 @@
     "Id": 304,
     "Process": 1,
     "Zone": 3,
+    "SceneType": "Match",
+    "Name": "Match",
+    "Port": 0
+  },
+  {
+    "Id": 305,
+    "Process": 1,
+    "Zone": 3,
     "SceneType": "Map",
     "Name": "Map1",
     "Port": 0
   },
   {
-    "Id": 305,
+    "Id": 306,
     "Process": 1,
     "Zone": 3,
     "SceneType": "Map",
