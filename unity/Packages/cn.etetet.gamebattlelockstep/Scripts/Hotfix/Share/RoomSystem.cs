@@ -66,6 +66,7 @@ namespace ET
         private static void SaveLSWorld(this Room self)
         {
             int frame = self.LSWorld.Frame;
+            // 保存当前帧场景数据
             MemoryBuffer memoryBuffer = self.FrameBuffer.Snapshot(frame);
             memoryBuffer.Seek(0, SeekOrigin.Begin);
             memoryBuffer.SetLength(0);
@@ -73,6 +74,7 @@ namespace ET
             MemoryPackHelper.Serialize(self.LSWorld, memoryBuffer);
             memoryBuffer.Seek(0, SeekOrigin.Begin);
 
+            // 计算hash
             long hash = memoryBuffer.GetBuffer().Hash(0, (int) memoryBuffer.Length);
             
             self.FrameBuffer.SetHash(frame, hash);
@@ -85,11 +87,13 @@ namespace ET
             {
                 return;
             }
+            // 保存当前帧输入数据
             OneFrameInputs oneFrameInputs = self.FrameBuffer.FrameInputs(frame);
             OneFrameInputs saveInput = OneFrameInputs.Create();
             oneFrameInputs.CopyTo(saveInput);
             self.Replay.FrameInputs.Add(saveInput);
-            if (frame % LSConstValue.SaveLSWorldFrameCount == 0) // 每隔1分钟保存一次场景数据
+            // 每隔1分钟保存一次场景数据
+            if (frame % LSConstValue.SaveLSWorldFrameCount == 0) 
             {
                 MemoryBuffer memoryBuffer = self.FrameBuffer.Snapshot(frame);
                 byte[] bytes = memoryBuffer.ToArray();

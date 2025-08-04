@@ -60,6 +60,7 @@ namespace ET.Client
                 lsReplayUpdater.ReplaySpeed *= 2;
             }
 
+            // 播放速度越快，帧间隔越小
             int updateInterval = LSConstValue.UpdateInterval / lsReplayUpdater.ReplaySpeed;
             room.FixedTimeCounter.ChangeInterval(updateInterval, room.AuthorityFrame);
         }

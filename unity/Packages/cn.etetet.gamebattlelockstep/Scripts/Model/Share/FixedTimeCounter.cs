@@ -4,7 +4,7 @@ namespace ET
     {
         private long startTime;
         private int startFrame;
-        public int Interval { get; private set; }
+        public int Interval { get; private set; } // 1帧间隔时间，单位毫秒。越小，帧率越高
 
         public FixedTimeCounter(long startTime, int startFrame, int interval)
         {

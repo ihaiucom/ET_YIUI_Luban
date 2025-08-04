@@ -26,14 +26,16 @@ namespace ET.Server
                 return;
             }
 
+            // 获取帧输入消息
             OneFrameInputs oneFrameInputs = self.GetOneFrameMessage(frame);
             ++room.AuthorityFrame;
 
+            // 将服务器的帧输入消息，广播客户端
             OneFrameInputs sendInput = OneFrameInputs.Create();
             oneFrameInputs.CopyTo(sendInput);
-
             RoomMessageHelper.BroadCast(room, sendInput);
 
+            // 服务器执行帧逻辑
             room.Update(oneFrameInputs);
         }
 

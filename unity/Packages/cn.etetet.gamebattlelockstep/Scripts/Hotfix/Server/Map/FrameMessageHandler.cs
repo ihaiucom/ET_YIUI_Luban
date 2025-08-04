@@ -12,6 +12,8 @@ namespace ET.Server
             
             Room room = root.GetComponent<Room>();
             FrameBuffer frameBuffer = room.FrameBuffer;
+            
+            // 每隔1秒，发送一次同步时间消息
             if (message.Frame % (1000 / LSConstValue.UpdateInterval) == 0)
             {
                 long nowFrameTime = room.FixedTimeCounter.FrameTime(message.Frame);
@@ -22,7 +24,7 @@ namespace ET.Server
                 room.Root().GetComponent<MessageLocationSenderComponent>().Get(LocationType.GateSession).Send(message.PlayerId, room2CAdjustUpdateTime);
             }
 
-            if (message.Frame < room.AuthorityFrame)  // 小于AuthorityFrame，丢弃
+            if (message.Frame < room.AuthorityFrame)  // 小于AuthorityFrame，丢弃。已经执行过的确认帧，不需要再执行
             {
                 Log.Warning($"FrameMessage < AuthorityFrame discard: {message}");
                 return;
@@ -34,6 +36,7 @@ namespace ET.Server
                 return;
             }
             
+            // 保存到对应帧、对应玩家的输入消息
             OneFrameInputs oneFrameInputs = frameBuffer.FrameInputs(message.Frame);
             if (oneFrameInputs == null)
             {

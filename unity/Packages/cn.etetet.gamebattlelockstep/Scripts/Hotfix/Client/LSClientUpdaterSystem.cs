@@ -3,19 +3,19 @@ using System.IO;
 
 namespace ET.Client
 {
-    [EntitySystemOf(typeof(LSClientOfflineUpdater))]
-    [FriendOf(typeof (LSClientOfflineUpdater))]
-    public static partial class LSClientOfflineUpdaterSystem
+    [EntitySystemOf(typeof(LSClientUpdater))]
+    [FriendOf(typeof (LSClientUpdater))]
+    public static partial class LSClientUpdaterSystem
     {
         [EntitySystem]
-        private static void Awake(this LSClientOfflineUpdater self)
+        private static void Awake(this LSClientUpdater self)
         {
             Room room = self.GetParent<Room>();
             self.MyId = room.Root().GetComponent<PlayerComponent>().MyId;
         }
         
         [EntitySystem]
-        private static void Update(this LSClientOfflineUpdater self)
+        private static void Update(this LSClientUpdater self)
         {
             Room room = self.GetParent<Room>();
             long timeNow = TimeInfo.Instance.ServerNow();
@@ -30,10 +30,10 @@ namespace ET.Client
                 }
 
                 // 最多只预测5帧
-                // if (room.PredictionFrame - room.AuthorityFrame > 5)
-                // {
-                //     return;
-                // }
+                if (room.PredictionFrame - room.AuthorityFrame > 5)
+                {
+                    return;
+                }
 
                 ++room.PredictionFrame;
                 OneFrameInputs oneFrameInputs = self.GetOneFrameMessages(room.PredictionFrame);
@@ -42,12 +42,12 @@ namespace ET.Client
                 room.SendHash(room.PredictionFrame);
                 
                 room.SpeedMultiply = ++i;
-                ++room.AuthorityFrame;
 
-                // FrameMessage frameMessage = FrameMessage.Create();
-                // frameMessage.Frame = room.PredictionFrame;
-                // frameMessage.Input = self.Input;
-                // root.GetComponent<ClientSenderComponent>().Send(frameMessage);
+                // 将输入消息发送给服务器
+                FrameMessage frameMessage = FrameMessage.Create();
+                frameMessage.Frame = room.PredictionFrame;
+                frameMessage.Input = self.Input;
+                root.GetComponent<ClientSenderComponent>().Send(frameMessage);
                 
                 long timeNow2 = TimeInfo.Instance.ServerNow();
                 if (timeNow2 - timeNow > 5)
@@ -57,7 +57,7 @@ namespace ET.Client
             }
         }
 
-        private static OneFrameInputs GetOneFrameMessages(this LSClientOfflineUpdater self, int frame)
+        private static OneFrameInputs GetOneFrameMessages(this LSClientUpdater self, int frame)
         {
             Room room = self.GetParent<Room>();
             FrameBuffer frameBuffer = room.FrameBuffer;

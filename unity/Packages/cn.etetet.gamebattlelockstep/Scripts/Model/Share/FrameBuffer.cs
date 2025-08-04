@@ -81,6 +81,7 @@ namespace ET
             
             ++this.MaxFrame;
             
+            // 取出最大帧的输入，清空
             OneFrameInputs oneFrameInputs = this.FrameInputs(this.MaxFrame);
             oneFrameInputs.Inputs.Clear();
         }
