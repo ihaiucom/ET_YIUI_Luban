@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ET.MemoryPack", "ET.MemoryP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ET.HybridCLR.Editor", "ET.HybridCLR.Editor.csproj", "{5b442cc5-8626-ad19-c319-64998a4dcf59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ET.Hotfix", "ET.Hotfix.csproj", "{bf069996-b248-a5f5-5c43-18efc373d2be}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ET.YooAssets.Editor", "ET.YooAssets.Editor.csproj", "{94d06418-1aa6-882a-9c55-5e545b8507bd}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ET.Core.Editor", "ET.Core.Editor.csproj", "{4d278dd0-ba14-642e-0890-b0a1e8ebfa36}"
@@ -44,6 +42,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ET.HybridCLR", "ET.HybridCLR.csproj", "{d1436d37-1de0-d49a-4cac-85fcaa66fbbd}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Artees.SemanticVersioning", "Artees.SemanticVersioning.csproj", "{b7045808-962f-f73c-0e5d-29563c8f7d19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ET.Hotfix", "ET.Hotfix.csproj", "{bf069996-b248-a5f5-5c43-18efc373d2be}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ET.PackageManager.Editor", "ET.PackageManager.Editor.csproj", "{4eeb6468-7f71-3d7e-2fae-48be08c928b4}"
 EndProject
@@ -172,8 +172,6 @@ Global
 		{93a145bd-5eec-7900-e332-424aadf1f2b8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5b442cc5-8626-ad19-c319-64998a4dcf59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5b442cc5-8626-ad19-c319-64998a4dcf59}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{bf069996-b248-a5f5-5c43-18efc373d2be}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{bf069996-b248-a5f5-5c43-18efc373d2be}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94d06418-1aa6-882a-9c55-5e545b8507bd}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{94d06418-1aa6-882a-9c55-5e545b8507bd}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4d278dd0-ba14-642e-0890-b0a1e8ebfa36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -204,6 +202,8 @@ Global
 		{d1436d37-1de0-d49a-4cac-85fcaa66fbbd}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{b7045808-962f-f73c-0e5d-29563c8f7d19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{b7045808-962f-f73c-0e5d-29563c8f7d19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{bf069996-b248-a5f5-5c43-18efc373d2be}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{bf069996-b248-a5f5-5c43-18efc373d2be}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4eeb6468-7f71-3d7e-2fae-48be08c928b4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4eeb6468-7f71-3d7e-2fae-48be08c928b4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0de76d01-e2b5-6b43-634d-7958d0d10654}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

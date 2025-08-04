@@ -23,7 +23,10 @@ namespace ET.Client
             World.Instance.AddSingleton<GameClient, Scene>(root);
             await InitUIAsync();
             
-            await EventSystem.Instance.PublishAsync(root, new AppStartInitFinish());
+            // await EventSystem.Instance.PublishAsync(root, new AppStartInitFinish());
+            
+            
+            await EntryBattleMapUtils.EnterRoomAsync(root, "Map1", 100);
         }
         
         

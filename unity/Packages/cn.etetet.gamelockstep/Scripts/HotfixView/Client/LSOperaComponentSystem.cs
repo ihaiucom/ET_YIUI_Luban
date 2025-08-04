@@ -5,6 +5,7 @@ namespace ET.Client
 {
     [EntitySystemOf(typeof(LSOperaComponent))]
     [FriendOf(typeof(LSClientUpdater))]
+    [FriendOfAttribute(typeof(ET.Client.LSClientOfflineUpdater))]
     public static partial class LSOperaComponentSystem
     {
         [EntitySystem]
@@ -12,7 +13,7 @@ namespace ET.Client
         {
 
         }
-        
+
         [EntitySystem]
         private static void Update(this LSOperaComponent self)
         {
@@ -37,8 +38,19 @@ namespace ET.Client
                 v.x += 1;
             }
 
-            LSClientUpdater lsClientUpdater = self.GetParent<Room>().GetComponent<LSClientUpdater>();
-            lsClientUpdater.Input.V = v.normalized;
+            Room room = self.GetParent<Room>();
+            if (room.OfflineMode)
+            {
+                LSClientOfflineUpdater lsClientOfflineUpdater = room.GetComponent<LSClientOfflineUpdater>();
+                lsClientOfflineUpdater.Input.V = v.normalized;
+            }
+            else
+            {
+                LSClientUpdater lsClientUpdater = room.GetComponent<LSClientUpdater>();
+                lsClientUpdater.Input.V = v.normalized;
+
+            }
+
         }
 
     }

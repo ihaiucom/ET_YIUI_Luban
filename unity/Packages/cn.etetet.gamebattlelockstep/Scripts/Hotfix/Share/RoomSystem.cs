@@ -89,7 +89,7 @@ namespace ET
             OneFrameInputs saveInput = OneFrameInputs.Create();
             oneFrameInputs.CopyTo(saveInput);
             self.Replay.FrameInputs.Add(saveInput);
-            if (frame % LSConstValue.SaveLSWorldFrameCount == 0)
+            if (frame % LSConstValue.SaveLSWorldFrameCount == 0) // 每隔1分钟保存一次场景数据
             {
                 MemoryBuffer memoryBuffer = self.FrameBuffer.Snapshot(frame);
                 byte[] bytes = memoryBuffer.ToArray();

@@ -49,7 +49,7 @@ namespace ET.Client
             if (self.frame != room.AuthorityFrame)
             {
                 self.frame = room.AuthorityFrame;
-                self.frameText.text = room.AuthorityFrame.ToString();
+                self.frameText.text = room.AuthorityFrame.ToString() + " -- " + ((room.AuthorityFrame * LSConstValue.UpdateInterval) / 1000F).ToString("F2") + "s";
             }
 
             if (!room.IsReplay)

@@ -48,5 +48,9 @@ namespace ET
         public bool IsReplay { get; set; }
         
         public int SpeedMultiply { get; set; }
+        
+        
+        
+        public bool OfflineMode { get; set; }   // 离线模式
     }
 }

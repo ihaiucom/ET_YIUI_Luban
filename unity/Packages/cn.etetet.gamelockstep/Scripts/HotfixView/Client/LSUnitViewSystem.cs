@@ -56,8 +56,14 @@ namespace ET.Client
                 self.GetComponent<LSAnimatorComponent>().SetFloatValue("Speed", 0);
             }
             self.t += Time.deltaTime;
-            self.Transform.rotation = Quaternion.Lerp(self.Transform.rotation, self.Rotation, self.t / 1f);
-            self.Transform.position = Vector3.Lerp(self.Transform.position, self.Position, self.t / self.totalTime);
+            
+            self.Transform.rotation = Quaternion.Slerp(self.Transform.rotation, self.Rotation, self.t / 1f);
+
+            if (self.totalTime > 0.0001f)
+            {
+                self.Transform.position = Vector3.Lerp(self.Transform.position, self.Position, self.t / self.totalTime);
+            }
+
         }
 
         private static LSUnit GetUnit(this LSUnitView self)

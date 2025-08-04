@@ -13,7 +13,8 @@ namespace ET
 
         public FrameBuffer(int frame = 0, int capacity = LSConstValue.FrameCountPerSecond * 60)
         {
-            this.MaxFrame = frame + LSConstValue.FrameCountPerSecond * 30;
+            // capacity = 60秒的容量
+            this.MaxFrame = frame + LSConstValue.FrameCountPerSecond * 30; // 至少留出30秒的空间
             this.frameInputs = new List<OneFrameInputs>(capacity);
             this.snapshots = new List<MemoryBuffer>(capacity);
             this.hashs = new List<long>(capacity);
