@@ -1,0 +1,14 @@
+{
+  "name": "cn.etetet.gamelockstep",
+  "displayName": "ET.GameLockStep",
+  "version": "1.0.0",
+  "unity": "2022.3",
+  "description": "game LockStep",
+  "author": {
+    "name": "zengfeng",
+    "url": "ihaiu.com"
+  },
+  "relatedPackages": {},
+  "dependencies": {
+  }
+}

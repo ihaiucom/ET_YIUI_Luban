@@ -54,5 +54,10 @@
     <ItemGroup>
         <CompilerVisibleProperty Include="DotNetAssembly" />
     </ItemGroup>
+    <ItemGroup>
+      <Folder Include="..\..\Scripts\Hotfix\Client\">
+        <Link>cn.etetet.gamemain\Scripts\Hotfix\Client</Link>
+      </Folder>
+    </ItemGroup>
 
 </Project>

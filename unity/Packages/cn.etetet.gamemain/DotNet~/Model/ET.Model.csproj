@@ -62,4 +62,9 @@
     <ItemGroup>
         <CompilerVisibleProperty Include="DotNetAssembly" />
     </ItemGroup>
+    <ItemGroup>
+      <Folder Include="..\..\Scripts\Model\Server\">
+        <Link>cn.etetet.gamemain\Scripts\Model\Server</Link>
+      </Folder>
+    </ItemGroup>
 </Project>
