@@ -50,12 +50,6 @@
       "source": "embedded",
       "dependencies": {}
     },
-    "cn.etetet.gamebattlelockstep": {
-      "version": "file:cn.etetet.gamebattlelockstep",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
-    },
     "cn.etetet.gamelockstep": {
       "version": "file:cn.etetet.gamelockstep",
       "depth": 0,
@@ -86,6 +80,12 @@
         "cn.etetet.memorypack": "1.10.1",
         "cn.etetet.startconfig": "3.0.0"
       }
+    },
+    "cn.etetet.gameroom": {
+      "version": "file:cn.etetet.gameroom",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
     },
     "cn.etetet.gameui": {
       "version": "file:cn.etetet.gameui",

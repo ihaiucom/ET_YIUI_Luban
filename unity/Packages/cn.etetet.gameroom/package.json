@@ -1,9 +1,9 @@
 {
-  "name": "cn.etetet.gamebattlelockstep",
-  "displayName": "ET.GameBattleLockStep",
+  "name": "cn.etetet.gameroom",
+  "displayName": "ET.GameRoom",
   "version": "1.0.0",
   "unity": "2022.3",
-  "description": "game Battle LockStep",
+  "description": "game Battle Room",
   "author": {
     "name": "zengfeng",
     "url": "ihaiu.com"
